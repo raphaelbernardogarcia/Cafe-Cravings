@@ -1,0 +1,332 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 12px;
+}
+body{background-image: url(../Picture/Essential/BG_Body.png)}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    border-radius: 0px;
+    border-bottom-style: solid;
+    background-color: #eeedea;
+    border-color: #b09b72;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all ease 5s;
+}
+
+header img.logo {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* Menu icon style */
+header .toggle-btn{font-size:1.5rem;cursor: pointer;display:none}
+
+.dropdown_menu {position: absolute;right: 2rem;
+    top:60px;width: 300px;background-color: white;
+    border-radius: 25px;border: #3f122f 1px solid;display: none;
+   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.dropdown_menu li{padding:0.7rem; display: flex; align-items: center;justify-content: center;}
+.dropdown_menu li a {color:#3f122f}
+.dropdown_menu li:hover {
+    background-color: #3f122f;
+}
+
+.dropdown-menu.open{display: block; height: auto;}
+.dropdown_menu li:hover a {
+    color: #eeedea;
+}
+/* Navbar styles */
+.nav_bar {
+    display: flex;
+}
+
+.nav_bar ul {
+    display: flex;
+    justify-content: center;
+}
+.nav_bar li      {align-items: center;margin-top:20px;justify-content: center;}
+.butoonright{margin-right: 20px;margin-top: -10px;}
+.butoonright a{color:#3f122f}
+.butoonright button {width:150px}
+.nav_bar a {
+    margin: 0 15px;
+    font-weight: 300;
+    color: #685a3e;
+    font-size: 20px;
+    transition: all ease 0.1s;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.button1 {
+    background-color: white;
+    padding: 10px;
+    border-color: #3f122f;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.buttonmenu{background-color:white;padding:10px;
+    border-color:#3f122f;
+    box-shadow:  0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    box-sizing:border-box;width: 100px;text-align:center;margin-top: 15px;}
+
+/*hover*/
+.nav_bar li a:hover,.nav_bar li a:active{
+    background-color: #3f122f;color:white
+ }
+ 
+
+.buttonmenu:hover{background-color: #3f122f;color: white;}
+
+
+.about {padding: 10px; background-color: rgba(255, 255, 255, 0.7);width: 100%; margin: 100px auto}
+.about p{width: 800px; margin: 100px auto;font-size:18px;margin-top: 25px;}
+.about h1{padding-top: 25px;color:#3f122f}
+section h1 {
+    text-align: center; font-weight:600 
+}
+
+.faq {
+    margin: 100px auto;
+    max-width: 1100px;
+    background-color: rgba(255, 255, 255, 0.7);padding: 25px;border-radius: 25px;
+}
+
+
+.faq h1{padding-top: 50px; font-weight:600 ;color:#3f122f}
+.faqcontent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin:50px 0px;
+}
+
+.faqct1 {
+    width: 45%;
+}
+
+.faqct1 h1 {
+    text-align: center;
+    margin-bottom: 20px;font-weight: 500;
+}
+
+.accordion {
+    margin-top: 0;
+}
+
+.accordion li {
+    list-style-type: none;
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #e3edf7;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+label::before {
+    content: '+';
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.accordion .content {
+    color: #555;
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="checkbox"]:checked + label + .content {
+    max-height: 400px;
+    padding: 10px 10px 20px;
+}
+
+.accordion input[type="checkbox"]:checked + label::before {
+    content: '-';
+}
+footer {
+    background-color: rgb(1,25,16,0.9);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  .LPC_logo img {width:100px;height:100px}
+  .LastPartContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #593131;
+  }
+  
+  .LPC_1, .LPC_2 {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .LPC_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .LPC_logo {
+    width: 50%;
+    text-align: center;
+  }
+  
+  .LPC_text {
+    width: 50%;
+    text-align: center;
+  }
+  
+  .LPC_text h2 {
+    margin-bottom: 10px;
+  }
+  
+  .LPC_text a {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .LPC_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .LPC_contact {
+    margin-bottom: 10px;
+  }
+  
+  .LPC_contact a {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  .lower_contact a {
+    color: #fff;
+    margin-right: 10px;
+  }
+/*Hover*/
+.LPC_text a:hover,.LPC_contact a:hover, .LPC_2 a:hover{color:#170310}
+
+@media (max-width: 767px) {
+    header {
+        justify-content: space-between;
+        padding: 10px;align-items: flex-start;padding: 10px;
+    }
+    header img {display: flex; justify-content: left;height: 50px;width: 50px;}
+    .nav_bar {
+        display: none;
+    }
+    header .toggle-btn{display: block;margin: 25px 10px 0px 0px}
+    .dropdown_menu{display: none;}
+    .butoonright{display: none;}
+    .about {
+        display: flex;
+        flex-wrap: wrap;padding: 20px;text-align: justify; 
+    }
+    .about h1 {
+        text-align: center;
+        width: 100%;  /* Ensure h1 takes up the full width */
+    }
+    .faq h1{text-align: center; width: 100%;}
+    .faqcontent {
+        display:flex;
+        flex-direction: column;justify-content: center;
+    }
+    .faqct1 {
+        width: 300px;
+    }
+    .accordion li label {
+        padding: 8px;
+        font-size: 16px;
+    }
+    label::before {
+        font-size: 20px;
+    }
+    .faq{display: flex;
+        flex-wrap: wrap;flex-direction:column;}
+    .faqct1 {display: flex;justify-content: center;flex-direction:column;margin:-5px}
+
+
+    .faqct1 h1 {
+        order: -1;
+        margin-bottom: 20px; text-align: center;margin: 5px;
+    }
+    .LastPartContent{flex-direction: column;padding:10px;bottom: 0;margin-top: 200px;}
+    .LPC_1,
+    .LPC_2 {
+        width: 100%;
+        text-align: center;display: flex;flex-direction: column;    }
+    .LPC_text a {
+        display: block;
+        margin: 5px 0;}
+
+    .LPC_logo,.LPC_text {
+        width: 100%;
+    }
+
+    .LPC_contact {
+        margin-bottom: 20px;
+    }
+    
+}
+.UPF_Logo{
+    height: 100px;
+    width: 100px;
+    border: 2px solid #b09b72;
+    border-radius: 20%;
+}
+.LastPartContent * {
+    color:white;
+}
